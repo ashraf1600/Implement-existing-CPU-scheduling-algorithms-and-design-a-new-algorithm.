@@ -33,7 +33,7 @@ CPU scheduling refers to the way processes are assigned CPU time for execution. 
 
 #### **5. Proposed Algorithm Explanation**
 
-The proposed algorithm is a hybrid approach combining **Priority Scheduling** with the **Longest Remaining Job First (LRJF)** approach. After determining the process priority, the algorithm will consider the longest burst time remaining among processes with the same priority and schedule them first. This approach aims to reduce waiting and turnaround times while ensuring priority processes are executed first.
+The proposed algorithm is a hybrid approach combining **Priority Scheduling** with the **Shortest Remaining Job First (LRJF)** approach. After determining the process priority, the algorithm will consider the shortest burst time remaining among processes with the same priority and schedule them first. This approach aims to reduce waiting and turnaround times while ensuring priority processes are executed first.
 
 #### **6. Pseudocode of Proposed Algorithm**
 
@@ -46,7 +46,7 @@ Output: Scheduling order based on priority and burst time
 1. Sort processes by arrival time.
 2. For each process, calculate the priority.
 3. For processes with the same priority:
-    a. Choose the one with the longest burst time.
+    a. Choose the one with the shortest burst time.
 4. Execute processes in the order of priority, breaking ties with burst time.
 5. Calculate Average Waiting Time (A.W.T), Average Turnaround Time (A.T.T), and Average Response Time (A.R.T).
 6. Display results in a Gantt Chart format.
